@@ -1,0 +1,81 @@
+.card {
+  border-style: inset;
+  margin: 0px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    50deg,
+    transparent,
+    rgb(200, 98, 137),
+    transparent
+  );
+}
+
+.headline {
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.filters {
+  font-size: 0.75em;
+  color: rgb(232, 186, 69);
+  font-weight: bolder;
+  padding-right: 10px;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.counter {
+  color: white;
+}
+
+.footnote {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgb(76, 77, 171),
+    transparent
+  );
+  float: inline;
+}
+
+.videos {
+  object-fit: contain;
+}
+
+video,
+img {
+  padding-top: 5px;
+  padding-left: 15px;
+  max-width: 140px;
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    margin: 20px;
+    background-image: linear-gradient(
+      50deg,
+      transparent,
+      lightblue,
+      transparent
+    );
+  }
+
+  img {
+    max-width: 50%;
+  }
+}
