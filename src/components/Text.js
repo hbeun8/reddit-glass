@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 
 function Text({index,text}) {
     const [isText, setisText] = useState(false);
-    const [readmore, setReadmore] = useState(false);
+    const [readmore, setReadmore] = useState(true);
 
     useEffect(() => {
-        text?setisText(true):setisText(false)
+        text?setisText(true):setisText(false);
     }, );
  
     return (

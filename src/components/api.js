@@ -3,14 +3,16 @@ import './api.css';
 import Search from './Search';
 import List from "./List";
 import Navbar from "./Navbar";
+import Filter from "./Filters";
 
 const Api = () => {
     const [posts, setPosts] = useState([]);  // Posts state
     const [query, setQuery] = useState('');   // Search query state
     const [error, setError] = useState(null); // Error state
     const [after, setAfter] = useState(null);  // Pagination cursor for fetching next posts
-    const [limit, setLimit] = useState(5);    // Number of posts per fetch
+    const [limit, setLimit] = useState(10);    // Number of posts per fetch
     const [loading, setLoading] = useState(false); // Loading state to prevent multiple fetches
+    const [filter, setFilter] = useState();
     const myHeaders = {};
     
     // Build the Reddit endpoint for popular posts or search
@@ -96,13 +98,30 @@ const Api = () => {
     if (loading && !posts.length) {
         return <div>Loading...</div>;
     }
+   
+
+    // Filter select handler
+    function handleFilter(filter, filterType) {
+            if (filterType.includes("title")){
+                setPosts(posts.filter((post) => post.data.title === filter));
+            }
+            else if (filterType.includes("author")){
+                setPosts(posts.filter((post) => post.data.author === filter));
+            } else if (filterType.includes("subreddit")){
+                setPosts(posts.filter((post) => post.data.subreddit_name_prefixed === filter));
+            } else {
+                setPosts(posts);
+                console.log("no match")
+            }
+        setFilter(filter);
+        console.log("handleFilter called: "+ filter);
+    }
 
     return (
         <div>
             <Search handleSearch = {handleSearch} />
+            <Filter posts={posts} handleFilter={handleFilter}/>
             <List posts_data={posts} />
-            
-            {/* Show loading indicator when fetching more posts */}
             {loading && posts.length > 0 && <div>Loading more...</div>}
         </div>
     );

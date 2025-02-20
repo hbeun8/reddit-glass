@@ -11,6 +11,28 @@
   );
 }
 
+.filter{
+  display: box;
+  overflow: hidden;
+  border-style: solid;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgb(98, 108, 200),
+    transparent
+  );
+}
+
+.filterItem {
+  display:flex;
+  margin: 10px 0px;
+
+}
+
 .headline {
   padding-top: 10px;
   padding-left: 15px;

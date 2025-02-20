@@ -1,8 +1,7 @@
-const initialState = [
-        { id: 0, text: 'Learn React', read: true, favorite: true, color:'', author:'', subreddit:'', type:'' },
-        { id: 1, text: 'Learn Redux', read: false, favorite: false, color: 'purple', author:'', subreddit:'', type:'' },
-        { id: 2, text: 'Build something fun!', read: false, favorite: false, color: 'blue', author:'', subreddit:'', type:'' }
-]
+
+import {posts} from '../../data/posts';//Fix this
+
+const initialState = {posts: posts, placeholder: "empty"};
 
 function nextPostId(posts) {
     const maxId = posts.reduce((maxId, todo) => Math.max(todo.id, maxId), -1)

@@ -4,7 +4,8 @@ import postsReducer from './features/posts/postsSlice'
 import filtersReducer from './features/filters/filtersSlice'
 
 const rootReducer = combineReducers({
-    // Define a top-level state field named `todos`, handled by `todosReducer`
+    // Define a top-level state field named `posts`, handled by `postsReducer`
+    // Define a top-level UI filters handled by `filtersReducer`
     posts: postsReducer,
     filters: filtersReducer
 })
@@ -19,3 +20,4 @@ Remember, the key names you give to combineReducers decides
 what the key names of your state object will be!
 */
 export default rootReducer;
+
