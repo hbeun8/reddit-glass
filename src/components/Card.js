@@ -68,8 +68,11 @@ function Card({ index, post, postsLen}) {
     <div className="card">
       <Headline index={index} title={title} url={url} postsLen={postsLen} />
       {/* Conditionally render image or video based on availability */}
-      <Images thumbnail={thumbnail} hoverEnlargeImage={hoverEnlargeImage}/>
-      <VideoPlayer index={index} thumbnail={image} video={video} />
+      {/*thumbnail&&<Images thumbnail={thumbnail} hoverEnlargeImage={hoverEnlargeImage}/>*/}
+      {video?
+      <VideoPlayer index={index} video={video} />
+      :<Images thumbnail={thumbnail} hoverEnlargeImage={hoverEnlargeImage}/>
+      }
       <Text index={index} text={text} />
       <Footnote
         index={index}

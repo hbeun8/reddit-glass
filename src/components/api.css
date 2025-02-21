@@ -11,7 +11,7 @@
   );
 }
 
-.filter{
+.filter {
   display: box;
   overflow: hidden;
   border-style: solid;
@@ -28,9 +28,8 @@
 }
 
 .filterItem {
-  display:flex;
+  display: flex;
   margin: 10px 0px;
-
 }
 
 .headline {
@@ -70,14 +69,18 @@
 }
 
 .videos {
-  object-fit: contain;
+  padding: 5px;
+  width: 90%;
+  height: auto;
 }
 
 video,
 img {
   padding-top: 5px;
   padding-left: 15px;
-  max-width: 140px;
+  padding-right: 15px;
+  width: 100%;
+  height: auto;
 }
 
 .text {
@@ -98,6 +101,6 @@ img {
   }
 
   img {
-    max-width: 50%;
+    max-width: 30%;
   }
 }

@@ -4,7 +4,7 @@ function Images ({thumbnail, hoverEnlargeImage}) {
 
     return (
         <>
-        <img className='images' src={thumbnail} alt="reddit" onmouseover={hoverEnlargeImage}></img>
+        <img className='images' src={thumbnail} alt="Imagereddit" onmouseover={hoverEnlargeImage}></img>
         </>
     )
 }
