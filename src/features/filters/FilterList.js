@@ -16,3 +16,15 @@ return <ul className="todo-list">{renderedListItems}</ul>
 }
 
 export default TodoList
+
+
+/*
+write small selector function
+//completed
+// filter(todo => todo.completed)
+// return completedTodo.length
+// so, selectors can return values
+// from the redux store state, and also return 
+// derived values based on that state as well
+
+*/
